@@ -14,16 +14,22 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "dotenv": "^4.0.0",
     "express": "~4.14.0",
     "fs-extra": "^1.0.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.4",
     "morgan": "~1.7.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-redux": "^5.0.2",
     "redux": "^3.6.0",
+    "redux-immutablejs": "^0.0.8",
+    "reselect": "^2.5.4",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
@@ -67,6 +73,7 @@
     "ora": "^0.3.0",
     "postcss-loader": "^1.2.2",
     "promise": "^7.1.1",
+    "redux-logger": "^2.7.4",
     "replace": "^0.3.0",
     "sass-loader": "^4.1.1",
     "semver": "^5.3.0",

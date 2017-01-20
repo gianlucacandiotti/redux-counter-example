@@ -1,11 +1,21 @@
 #!/usr/bin/env node
 
+var path = require('path');
+var appModulePath = require('app-module-path');
+
+appModulePath.addPath(path.resolve(__dirname, '..'));
+appModulePath.addPath(path.resolve(__dirname, '../src/js'));
+
+require('babel-register')({
+  presets: ['es2015', 'stage-2', 'react'],
+});
+
+require('dotenv').config()
+
 /**
  * Module dependencies.
  */
-
-require('dotenv').config()
-var app = require('../app');
+var app = require('../app').default;
 var debug = require('debug')('xvue:server');
 var http = require('http');
 

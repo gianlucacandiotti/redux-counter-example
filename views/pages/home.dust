@@ -1,6 +1,5 @@
 {>"layouts/base"/}
 
 {<content}
-<div id="hello"></div>
-<div id="counter"></div>
+<div id="home">{html|s}</div>
 {/content}

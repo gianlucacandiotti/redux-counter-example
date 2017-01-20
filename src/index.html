@@ -7,7 +7,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <link rel="shortcut icon" href="favicon.ico">
-    <title>xReact</title>
+    <title>{?title}{title}{:else}Redux Chat{/title}</title>
+
+    <script>
+        window.__PRELOADED_STATE__ = {preloadedState|js|s};
+    </script>
   </head>
   <body>
     <main role=”main”>

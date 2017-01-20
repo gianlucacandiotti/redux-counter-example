@@ -26,7 +26,9 @@ module.exports = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/js/components')
+      'components': path.resolve(__dirname, '../src/js/components'),
+      'modules': path.resolve(__dirname, '../src/js/modules'),
+      'utils': path.resolve(__dirname, '../src/js/utils')
     }
   },
   resolveLoader: {
