@@ -1,7 +1,14 @@
 import * as t from './actionTypes';
 
-export const addNew = () => ({
-  type: t.ADD_NEW,
+export const add = () => ({
+  type: t.ADD,
+});
+
+export const remove = (id) => ({
+  type: t.REMOVE,
+  payload: {
+    id,
+  },
 });
 
 export const increment = (id) => ({

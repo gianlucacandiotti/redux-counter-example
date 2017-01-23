@@ -1,8 +1,8 @@
 import sinon from 'sinon';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Counter from 'components/Counter';
-import CounterList from './index';
+import Counter from 'components/Counter/Counter';
+import CounterList from './CounterList';
 
 describe('CounterList component', () => {
   it('renders correctly', () => {
@@ -11,7 +11,7 @@ describe('CounterList component', () => {
     const wrapper = shallow(
       <CounterList
         counters={counters}
-        onAddNew={() => false}
+        onRemove={() => false}
         onIncrement={() => false}
         onDecrement={() => false}
       />
@@ -35,7 +35,7 @@ describe('CounterList component', () => {
     const wrapper = shallow(
       <CounterList
         counters={counters}
-        onAddNew={() => false}
+        onRemove={() => false}
         onIncrement={() => false}
         onDecrement={() => false}
       />

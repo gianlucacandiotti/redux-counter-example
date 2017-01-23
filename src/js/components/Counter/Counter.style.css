@@ -1,0 +1,15 @@
+.counter {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.counter-remove {
+  background-color: #00d1b2;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.counter-remove:hover {
+  background-color: #00c4a7;
+}

@@ -1,22 +1,22 @@
 import React, { PropTypes } from 'react';
-import Counter from 'components/Counter';
+import Counter from 'components/Counter/Counter';
 
 const CounterList = ({
   counters,
-  onAddNew,
+  onRemove,
   onIncrement,
   onDecrement
 }) => (
-  <div>
+  <div className="counter-list block">
     {counters.map((counter) => (
       <Counter
         key={counter.id}
         {...counter}
+        onRemoveClick={() => onRemove(counter.id)}
         onIncrementClick={() => onIncrement(counter.id)}
         onDecrementClick={() => onDecrement(counter.id)}
       />
     ))}
-    <button className="button is-primary" onClick={onAddNew}>Add New Counter</button>
   </div>
 );
 
@@ -25,7 +25,7 @@ CounterList.propTypes = {
     id: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
   })),
-  onAddNew: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
   onIncrement: PropTypes.func.isRequired,
   onDecrement: PropTypes.func.isRequired,
 };

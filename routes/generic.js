@@ -1,6 +1,6 @@
 import express from  'express';
 import React from  'react';
-import Home from  'pages/Home';
+import Home from  'pages/Home/Home';
 import reducer from  'pages/Home/reducer';
 import prepComponent from  '../utils/prepComponent';
 
@@ -12,8 +12,6 @@ router.get('/', (req, res, next) => {
     html,
     preloadedState,
   } = prepComponent(<Home />, reducer);
-
-  console.log(preloadedState);
 
   res.render('pages/home', {
     html,

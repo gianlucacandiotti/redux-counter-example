@@ -10,13 +10,14 @@ const preloadedState = window.__PRELOADED_STATE__;
 const mountReduxComponent = (selector, component, reducer) => {
   const logger = createLogger({
     stateTransformer: (state) => {
-      let newState = {};
+      const newState = {};
+      const stateObj = state.toObject();
 
-      for (let i of Object.keys(state)) {
-        if (Immutable.Iterable.isIterable(state[i])) {
-          newState[i] = state[i].toJS();
+      for (const i of Object.keys(stateObj)) {
+        if (Immutable.Iterable.isIterable(stateObj[i])) {
+          newState[i] = stateObj[i].toJS();
         } else {
-          newState[i] = state[i];
+          newState[i] = stateObj[i];
         }
       }
 

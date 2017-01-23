@@ -1,20 +1,22 @@
 import React, { PropTypes } from 'react';
-import './styles.scss';
+import './Counter.style.css';
 
 const Counter = ({
   value,
+  onRemoveClick,
   onIncrementClick,
   onDecrementClick,
 }) => (
   <div className="counter card block">
+    <button className="counter-remove delete" onClick={onRemoveClick}></button>
     <div className="card-content has-text-centered">
       <div className="content">
         {value}
       </div>
     </div>
     <footer className="card-footer">
-      <a className="card-footer-item" onClick={onIncrementClick}>Increment</a>
-      <a className="card-footer-item" onClick={onDecrementClick}>Decrement</a>
+      <a className="card-footer-item counter-increment" onClick={onIncrementClick}>Increment</a>
+      <a className="card-footer-item counter-decrement" onClick={onDecrementClick}>Decrement</a>
     </footer>
   </div>
 );
