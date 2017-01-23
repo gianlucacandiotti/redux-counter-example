@@ -1,15 +1,15 @@
-.counter {
+.root {
   max-width: 300px;
   margin: 0 auto;
 }
 
-.counter-remove {
+.removeButton {
   background-color: #00d1b2;
   position: absolute;
   top: 5px;
   right: 5px;
-}
 
-.counter-remove:hover {
-  background-color: #00c4a7;
+  &:hover {
+    background-color: #00c4a7;
+  }
 }

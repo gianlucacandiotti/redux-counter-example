@@ -6,9 +6,29 @@ var appModulePath = require('app-module-path');
 appModulePath.addPath(path.resolve(__dirname, '..'));
 appModulePath.addPath(path.resolve(__dirname, '../src/js'));
 
+var sass = require('node-sass');
+
+function processSass(data, filename) {
+  var result;
+
+  result = sass.renderSync({
+    data: data,
+    file: filename,
+  }).css;
+
+  return result.toString('utf8');
+};
+
 require('babel-register')({
   presets: ['es2015', 'stage-2', 'react'],
-  plugins: ['css-modules-transform'],
+  plugins: [
+    [
+      'css-modules-transform', {
+        'preprocessCss': processSass,
+        'extensions': ['.css', '.scss'],
+      },
+    ],
+  ],
   ignore: /(processCss\.js|node_modules)/,
 });
 

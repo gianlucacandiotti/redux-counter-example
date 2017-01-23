@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon -L ./bin/www",
     "predev": "node build/pre-dev.js",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -71,6 +71,7 @@
     "json-loader": "^0.5.4",
     "lolex": "^1.4.0",
     "node-sass": "^4.2.0",
+    "nodemon": "^1.11.0",
     "object-assign": "^4.1.1",
     "opn": "^4.0.2",
     "ora": "^0.3.0",
