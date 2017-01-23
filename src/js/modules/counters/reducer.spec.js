@@ -1,25 +1,82 @@
+import { List, Map } from 'immutable';
 import reducer from './reducer';
+import * as actions from './actions';
 
-it('increments the counter starting at 0', () => {
-  expect(reducer(0, { type: 'INCREMENT' })).toEqual(1);
+it('adds a counter', () => {
+  const state = List.of(Map({
+    id: 1,
+    value: 0,
+  }));
+
+  const action = actions.addNew();
+
+  const nextState = List.of(
+    Map({
+      id: 1,
+      value: 0,
+    }),
+    Map({
+      id: 2,
+      value: 0,
+    })
+  );
+
+  expect(reducer(state, action)).toEqual(nextState);
 });
 
-it('increments the counter starting at 1', () => {
-  expect(reducer(1, { type: 'INCREMENT' })).toEqual(2);
+it('increments the counter', () => {
+  const state = List.of(
+    Map({
+      id: 1,
+      value: 0,
+    },
+  ));
+
+  const action = actions.increment(1);
+
+  const nextState = List.of(
+    Map({
+      id: 1,
+      value: 1,
+    },
+  ));
+
+  expect(reducer(state, action)).toEqual(nextState);
 });
 
-it('decrements the counter starting at 2', () => {
-  expect(reducer(2, { type: 'DECREMENT' })).toEqual(1);
-});
+it('decrements the counter', () => {
+  const state = List.of(
+    Map({
+      id: 1,
+      value: 1,
+    },
+  ));
 
-it('decrements the counter starting at 1', () => {
-  expect(reducer(1, { type: 'DECREMENT' })).toEqual(0);
+  const action = actions.decrement(1);
+
+  const nextState = List.of(
+    Map({
+      id: 1,
+      value: 0,
+    },
+  ));
+
+  expect(reducer(state, action)).toEqual(nextState);
 });
 
 it('handles unknown actions', () => {
-  expect(reducer(1, { type: 'UNKNOWN' })).toEqual(1);
+  const state = List.of(
+    Map({
+      id: 1,
+      value: 1,
+    },
+  ));
+
+  expect(reducer(state, { type: 'UNKNOWN' })).toEqual(state);
 });
 
 it('handles undefined initial state', () => {
-  expect(reducer(undefined, {})).toEqual(0);
+  const nextState = List();
+
+  expect(reducer(undefined, {})).toEqual(nextState);
 });

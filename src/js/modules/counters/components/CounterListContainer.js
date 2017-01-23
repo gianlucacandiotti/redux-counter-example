@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect';
 import CounterList from 'components/CounterList';
-import { getAll } from '../../selectors';
-import * as actions from '../../actions';
+import { getAll } from '../selectors';
+import * as actions from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {

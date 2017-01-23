@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Counter from 'components/Counter';
 
 const CounterList = ({
@@ -16,8 +16,18 @@ const CounterList = ({
         onDecrementClick={() => onDecrement(counter.id)}
       />
     ))}
-    <button onClick={onAddNew}>Add New Counter</button>
+    <button className="button is-primary" onClick={onAddNew}>Add New Counter</button>
   </div>
 );
+
+CounterList.propTypes = {
+  counters: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  })),
+  onAddNew: PropTypes.func.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
+};
 
 export default CounterList;

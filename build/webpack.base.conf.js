@@ -24,7 +24,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.json'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      'src': path.resolve(__dirname, '../src'),
+      'sass': path.resolve(__dirname, '../src/sass'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/js/components'),
       'modules': path.resolve(__dirname, '../src/js/modules'),
