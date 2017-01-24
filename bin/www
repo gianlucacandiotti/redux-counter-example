@@ -25,7 +25,7 @@ require('babel-register')({
     [
       'css-modules-transform', {
         'preprocessCss': processSass,
-        'extensions': ['.css', '.scss'],
+        'extensions': ['.css', '.scss', '.scssm'],
       },
     ],
   ],

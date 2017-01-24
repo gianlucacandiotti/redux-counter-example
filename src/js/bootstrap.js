@@ -10,4 +10,4 @@ import 'bulma/bulma.sass';
  * Import our global source styles like helpers and some base styles.
  */
 
-import 'sass/index.gscss';
+import 'sass/index.scss';
