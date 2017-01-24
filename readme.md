@@ -23,7 +23,7 @@ It actually uses more libraries than the ones listed above but I feel like these
 
 You are all set to go. Now you may just run the commands below to start developing ! For development I open two consoles in order to run `npm run dev` and `npm start`, then open a browser pointing to your project's url at port 3000 (by default).
 
-## Tasks to run it
+## Tasks
 
 These are the tasks included in the template. I'll use most of the descriptions from the [Vuejs Webpack template](https://github.com/vuejs-templates/webpack) and [create-react-app](https://github.com/facebookincubator/create-react-app) projects since the configuration is a merge of those. If you want to know anything else about the tasks, about the folder structure or how to change or extend anything refer to their docs.
 
