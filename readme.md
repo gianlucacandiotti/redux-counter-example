@@ -1,19 +1,27 @@
-# xReact
+# Redux Counter Example
 
-This is an Express template I plan to use for my own projects. It's still work in progress but you can check it out. You can also checkout my [xVue](https://github.com/gianlucacandiotti/xvue) template that uses almost the same configuration but supports Vue.js.
+This project showcases a lot of different technologies in combination. You can use it as reference or as a starting point for a new project.
 
-## Why did you do this ?
+## What technologies / tools does it use ?
 
-I'm a Front End developer often starting new projects and felt like an Express.js template with decent configuration for React.js was missing. Most tools for scaffolding out there are configured for SPAs and it's not always the use case. So I setted up this project that is kind of a merge between an express generated app and the configuration of the [vue-webpack template](https://github.com/vuejs-templates/webpack) and the [create-react-app](https://github.com/facebookincubator/create-react-app) project for my future use. It has [Dust.js](http://www.dustjs.com/) as its template engine.
+* React
+* Redux
+* Server Side Rendering
+* Immutable.js
+* Scss + Css Modules
+* Jest + Enzyme + Sinon
+* Bulma
 
-## How can I start a project using this ?
+It actually uses more libraries than the ones listed above but I feel like these are the most important. The file structure is pretty good also. If anyone got any feedback I'd appreciate it a lot.
 
-1. `git clone https://github.com/gianlucacandiotti/xreact.git PROJECT_NAME`.
+## Steps to run it
+
+1. `git clone https://github.com/gianlucacandiotti/redux-counter-example.git PROJECT_NAME`.
 2. `cd PROJECT_NAME && yarn` (or `npm install` if that suites you better).
 3. `cp .env-example .env`
 4. Modify your .env file to have the HOST variable be the same as your project's url (localhost by default).
 
-You are all set to go. Now you may just run the commands below to start developing !
+You are all set to go. Now you may just run the commands below to start developing ! For development I open two consoles in order to run `npm run dev` and `npm start`, then open a browser pointing to your project's url at port 3000 (by default).
 
 ## What's included
 

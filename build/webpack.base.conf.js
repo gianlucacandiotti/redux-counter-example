@@ -82,6 +82,11 @@ module.exports = {
       }
     ]
   },
+  postcss() {
+    return [
+      require('autoprefixer')
+    ]
+  },
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },

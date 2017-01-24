@@ -28,18 +28,19 @@ exports.cssLoaders = function (options) {
     // Extract CSS when that option is specified
     // (which is the case during production build)
     if (options.extract) {
-      return ExtractTextPlugin.extract(sourceLoader)
+      return ExtractTextPlugin.extract('style-loader', sourceLoader)
     } else {
       return ['style-loader', sourceLoader].join('!')
     }
   }
 
   return {
-    css: generateLoaders(['css?modules']),
+    css: generateLoaders(['css']),
     postcss: generateLoaders(['css']),
     less: generateLoaders(['css', 'less']),
-    sass: generateLoaders(['css?modules?importLoaders=1', 'sass?indentedSyntax']),
-    scss: generateLoaders(['css?modules?importLoaders=1', 'sass']),
+    sass: generateLoaders(['css', 'sass?indentedSyntax']),
+    scss: generateLoaders(['css', 'postcss', 'sass']),
+    scssm: generateLoaders(['css?modules&importLoaders=2', 'postcss', 'sass']),
     stylus: generateLoaders(['css', 'stylus']),
     styl: generateLoaders(['css', 'stylus'])
   }
