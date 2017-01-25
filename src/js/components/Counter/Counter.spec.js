@@ -1,5 +1,5 @@
-import sinon from 'sinon';
 import React from 'react';
+import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import Counter from './Counter';
 
